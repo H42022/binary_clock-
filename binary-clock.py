@@ -1,4 +1,4 @@
-"""scripte """
+"""scripte skal gøre at sense hat bliver til et binary ur"""
 from sense_hat import SenseHat
 from datetime import datetime
 import time
@@ -115,7 +115,7 @@ def startup():
         elif i.lower() == "v" or i.lower() == "vertical":
             directionhorizontal = False
     start = False
-    
+
 #hårdter når program slutter 
 signal.signal(signal.SIGTERM, signal_term_handler)
 signal.signal(signal.SIGINT, signal_term_handler)
