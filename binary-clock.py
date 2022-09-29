@@ -115,6 +115,7 @@ def startup():
         elif i.lower() == "v" or i.lower() == "vertical":
             directionhorizontal = False
     start = False
+    
 #hårdter når program slutter 
 signal.signal(signal.SIGTERM, signal_term_handler)
 signal.signal(signal.SIGINT, signal_term_handler)
