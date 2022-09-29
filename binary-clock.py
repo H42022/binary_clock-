@@ -48,14 +48,15 @@ def display_binary(value, row, color):
             else:
                 sense.set_pixel(x, row, off_color)
     else:
+        if len(str(value)) == 1:
+            value = "0"+str(value)
         arr = [int(a) for a in str(value)]
-        if len(arr)>1:
-            binary_str = "{0:4b}".format(arr[1])
-            for y in range(0,4):
-                if binary_str[y] == '1':
-                    sense.set_pixel(row+1, y, color)
-                else:
-                    sense.set_pixel(row+1, y, off_color)
+        binary_str = "{0:4b}".format(arr[1])
+        for y in range(0,4):
+            if binary_str[y] == '1':
+                sense.set_pixel(row+1, y, color)
+            else:
+                sense.set_pixel(row+1, y, off_color)
         binary_str = "{0:4b}".format(arr[0])
         for x in range(0, 4):
             if binary_str[x] == '1':
@@ -138,7 +139,7 @@ def main():
         if stop:
             sense.show_message("Programmet slutter")
             sys.exit(0)
-        #tid = datetime(year=1999,month=5,day=4,hour=19,minute=30,second=55,microsecond=0)
+        #tid = datetime(year=1999,month=5,day=4,hour=19,minute=31,second=55,microsecond=0)
         tid = datetime.now()
         if timeformat12 == True:
             # har ser vi om det er am eller pm og sætte den color som passer med tidspukket 
