@@ -104,7 +104,7 @@ def pushed_middle(event):
 def startup():
     """Har se vi om der er give noget parametre igemmen kommando line og sætte uret op til hvad bruger vil har"""
     global start
-    global timeformat12program
+    global timeformat12
     global directionhorizontal
     #slice argv list for vi vil ikke har fat i filens navn da vi ikke skal bruge den til noget
     argvlist = sys.argv[1::]
