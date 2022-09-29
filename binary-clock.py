@@ -8,7 +8,7 @@ import re
 
 sense = SenseHat()
 
-#sense.show_message("programmet starter")
+sense.show_message("programmet starter")
 
 
 def signal_term_handler(signal, frame):
@@ -135,10 +135,10 @@ def main():
         if start:
             startup()
         if stop:
-            #sense.show_message("Programmet slutter")
+            sense.show_message("Programmet slutter")
             sys.exit(0)
-        tid = datetime(year=1999,month=5,day=4,hour=19,minute=30,second=55,microsecond=0)
-        #tid = datetime.now()
+        #tid = datetime(year=1999,month=5,day=4,hour=19,minute=30,second=55,microsecond=0)
+        tid = datetime.now()
         if timeformat12 == True:
             # har ser vi om det er am eller pm og sætte den color som passer med tidspukket 
             AM_or_PM = tid.strftime("%I:%M:%S:%P")
